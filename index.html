@@ -12,6 +12,12 @@
 			{{item.name}} - <em>{{item.age}}</em>
 		</li>
 	</ul>
+
+	<form ng-submit="addPerson()">
+		<input type="text" placeholder="Name" ng-model="name">
+		<input type="text" placeholder="Age"  ng-model="age">
+		<input type="submit" value="Submit">
+	</form>
 	
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="directory.js"></script>
