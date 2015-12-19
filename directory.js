@@ -1,21 +1,22 @@
 angular.module('directoryApp',[])
-	.controller('directoryController',function($scope){
+	.controller('directoryController',function(){
 
-		$scope.list = [
+		var dirList = this;
+		dirList.list = [
 			{name:'Scott', age:29},
 			{name:'Ross', age:29},
 			{name:'Ben', age:29},
 			{name:'Courtney', age:29}
 		];
 
-		$scope.addPerson = function(){
-			$scope.list.push({
-				name : $scope.name,
-				age  : $scope.age
+		dirList.addPerson = function(){
+			dirList.list.push({
+				name : dirList.name,
+				age  : dirList.age
 			});
-			
-			$scope.name = "";
-			$scope.age  = "";
+
+			dirList.name = "";
+			dirList.age  = "";
 		}
 
 	});
