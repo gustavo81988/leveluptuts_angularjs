@@ -4,10 +4,18 @@
 	 <meta charset="UTF-8"> 
 	<title>AngularJs for everyone</title>
 </head>
-<body ng-init="list =[{name:'Scott', age:29},{name:'Courtney', age:29}]">
+<body 
+	ng-init="list =[
+		{name:'Scott', age:29},
+		{name:'Ross', age:29},
+		{name:'Ben', age:29},
+		{name:'Courtney', age:29}
+
+]">
+	<input type="text" ng-model="search">
 
 	<ul>
-		<li ng-repeat="item in list">
+		<li ng-repeat="item in list | filter:search">
 			{{item.name}} - <em>{{item.age}}</em>
 		</li>
 	</ul>
