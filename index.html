@@ -24,7 +24,7 @@
 		<li ng-repeat="item in dirList.list | filter:search"
 			ng-class="item.age > 30 ? 'over-thirty' : 'under-thirty'"
 		>
-			{{item.name}} - <em>{{item.age}}</em>
+			<img ng-src="{{item.img}}"/>{{item.name}} - <em>{{item.age}}</em>
 		</li>
 	</ul>
 
