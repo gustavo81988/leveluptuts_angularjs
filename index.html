@@ -4,27 +4,34 @@
 	<meta charset="UTF-8"> 
 	<title>AngularJs for everyone</title>
 	<style type="text/css">
-	.over-thirty{
-		background: red;
-		color: white;
+	ul{
+		list-style: none;
 	}
-	.under-thirty{
-		background: blue;
-		color: white;
+	li{
+		display: flex;
+		margin-bottom: 10px;
 	}
-	.hidden{
-		display: none;
+	li span{
+		display: inline-block;
+		line-height: 50px;
 	}
+	li img{
+		margin-right: 10px;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+	}
+	#twitter{
+		fill: blue !important;
+	}
+	
 	</style>
 </head>
 <body ng-controller="directoryController as dirList">
 	<input type="text" ng-model="search">
 
-	<ul ng-class="{'hidden': !dirList.toggle}">
-		<li ng-repeat="item in dirList.list | filter:search"
-			ng-class="item.age > 30 ? 'over-thirty' : 'under-thirty'"
-		>
-			<img ng-src="{{item.img}}"/>{{item.name}} - <em>{{item.age}}</em>
+	<ul ng-class="{'ng-hide': !dirList.toggle}">
+		<li ng-repeat="item in dirList.list | filter:search" ng-include="'person.html'">
 		</li>
 	</ul>
 

@@ -3,7 +3,7 @@ angular.module('directoryApp',[])
 
 		var dirList = this;
 
-		dirList.toggle = false;
+		dirList.toggle = true;
 
 		dirList.list = [
 			{name:'Scott', age:29, img: 'https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg'},
